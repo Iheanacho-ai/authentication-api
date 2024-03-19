@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 	"time"
@@ -133,7 +134,16 @@ func Logout(c *gin.Context) {
 	c.SetCookie("Authorization", "", 1 , "", "", false, true)
 }
 
+// Validate
+func Validate(c *gin.Context){
+	user, _ := c.Get("user")
 
+	c.JSON(http.StatusOK, gin.H{
+		"user": user,
+	})
+
+	fmt.Println("I am logged in!")
+
+}
 //ResetPassword
 //ForgotPassword
-// Validate
