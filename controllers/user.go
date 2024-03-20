@@ -145,5 +145,4 @@ func Validate(c *gin.Context){
 	fmt.Println("I am logged in!")
 
 }
-//ResetPassword
-//ForgotPassword
+

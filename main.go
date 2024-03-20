@@ -9,7 +9,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func init (){
+func init(){
 	initializers.LoadEnvVariables()
 	initializers.ConnectToDB()
 	initializers.SyncDatabase()
